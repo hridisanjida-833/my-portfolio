@@ -3,13 +3,102 @@
 <head>
     <title>Ridi | Portfolio</title>
 </head>
-
+<link rel="stylesheet" href="style.css">
 <body>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</nav>
+   <section class="home">
+    <p class="small-text">WELCOME TO MY PORTFOLIO</p>
 
-    <h1>Hello, I'm Ridi 👋</h1>
+    <h1>Hello, I'm <span>Ridi</span> 👋</h1>
 
-    <p>I am a CSE student.</p>
-    <p>Welcome to my portfolio website!</p>
+    <p>I am a CSE student and I'm learning web development.</p>
 
+    <button>View My Work</button>
+</section>
+<section class="about">
+    <p class="small-text">ABOUT ME</p>
+
+    <h2>Who I Am</h2>
+
+    <p>
+        My name is Ridi. I am a CSE student who is interested in
+        web development and programming. I enjoy learning new
+        technologies and building creative projects.
+    </p>
+</section>
+<section class="skills">
+    <p class="small-text">MY SKILLS</p>
+
+    <h2>What I Know</h2>
+
+    <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</section>
+<section class="projects">
+    <p class="small-text">MY PROJECTS</p>
+
+    <h2>What I've Built</h2>
+
+    <div class="project-list">
+
+        <div class="project-card">
+            <h3>My Portfolio</h3>
+            <p>
+                A personal portfolio website built using HTML and CSS.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Wholesale Management System</h3>
+            <p>
+                A web-based system for managing products, inventory,
+                and wholesale business information.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Smart Livestock Farm</h3>
+            <p>
+                A web application providing information about farm
+                animals and useful waste management solutions.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section class="contact">
+    <p class="small-text">CONTACT ME</p>
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        Have a question or want to work together?
+        Feel free to send me a message.
+    </p>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+<footer>
+    <p>© 2026 Ridi. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
