@@ -3,7 +3,11 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 100px;
+    color: #222;
+    transition: 0.3s;
 }
+
+/* Heading */
 
 h1 {
     color: #6c4ab6;
@@ -14,6 +18,10 @@ p {
     color: #555;
     font-size: 20px;
 }
+
+
+/* Navigation */
+
 nav {
     margin-bottom: 60px;
 }
@@ -28,6 +36,21 @@ nav a {
 nav a:hover {
     color: #6c4ab6;
 }
+
+
+/* Theme Button */
+
+#themeButton {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+
+/* Home */
+
 .home {
     padding: 40px 20px;
 }
@@ -61,6 +84,10 @@ nav a:hover {
 .home button:hover {
     background-color: #553394;
 }
+
+
+/* About */
+
 .about {
     max-width: 700px;
     margin: 80px auto;
@@ -77,6 +104,10 @@ nav a:hover {
     font-size: 18px;
     line-height: 1.8;
 }
+
+
+/* Skills */
+
 .skills {
     padding: 60px 20px;
 }
@@ -100,12 +131,17 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     color: #555;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .skill:hover {
     transform: translateY(-5px);
     color: #6c4ab6;
 }
+
+
+/* Projects */
+
 .projects {
     padding: 60px 20px;
 }
@@ -145,6 +181,10 @@ nav a:hover {
 .project-card:hover {
     transform: translateY(-8px);
 }
+
+
+/* Contact */
+
 .contact {
     max-width: 600px;
     margin: 80px auto;
@@ -194,6 +234,10 @@ nav a:hover {
 .contact button:hover {
     background-color: #553394;
 }
+
+
+/* Footer */
+
 footer {
     margin-top: 60px;
     padding: 25px;
@@ -205,4 +249,101 @@ footer {
 footer p {
     color: white;
     font-size: 15px;
+}
+
+
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
+
+body:not(.light-mode) {
+    background-color: #17151f;
+    color: #f5f5f5;
+}
+
+body:not(.light-mode) p {
+    color: #c9c9c9;
+}
+
+body:not(.light-mode) nav a {
+    color: #ddd;
+}
+
+body:not(.light-mode) nav a:hover {
+    color: #a98bea;
+}
+
+body:not(.light-mode) .about > p:last-child {
+    color: #c9c9c9;
+}
+
+body:not(.light-mode) .contact > p:not(.small-text) {
+    color: #c9c9c9;
+}
+
+body:not(.light-mode) .skill {
+    background-color: #24212e;
+    color: #f5f5f5;
+}
+
+body:not(.light-mode) .project-card {
+    background-color: #24212e;
+}
+
+body:not(.light-mode) .project-card p {
+    color: #c9c9c9;
+}
+
+body:not(.light-mode) .contact input,
+body:not(.light-mode) .contact textarea {
+    background-color: #24212e;
+    color: white;
+    border-color: #444;
+}
+
+body:not(.light-mode) .contact input::placeholder,
+body:not(.light-mode) .contact textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* ========================= */
+/* LIGHT MODE */
+/* ========================= */
+
+body.light-mode {
+    background-color: #f5f3ff;
+    color: #222;
+}
+
+body.light-mode p {
+    color: #555;
+}
+
+body.light-mode nav a {
+    color: #555;
+}
+
+body.light-mode nav a:hover {
+    color: #6c4ab6;
+}
+
+body.light-mode .skill {
+    background-color: white;
+    color: #555;
+}
+
+body.light-mode .project-card {
+    background-color: white;
+}
+
+body.light-mode .project-card p {
+    color: #555;
+}
+
+body.light-mode .contact input,
+body.light-mode .contact textarea {
+    background-color: white;
+    color: #222;
+    border-color: #ddd;
 }
