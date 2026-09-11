@@ -6,23 +6,25 @@
 <link rel="stylesheet" href="style.css">
 <body>
 <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
     <button id="themeButton">🌙</button>
 </nav>
-   <section class="home">
+  <section class="home" id="home">
     <p class="small-text">WELCOME TO MY PORTFOLIO</p>
 
     <h1>Hello, I'm <span>Ridi</span> 👋</h1>
 
     <p>I am a CSE student and I'm learning web development.</p>
 
-    <button>View My Work</button>
+    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+    View My Work
+</button>
 </section>
-<section class="about">
+<section class="about" id="about">
     <p class="small-text">ABOUT ME</p>
 
     <h2>Who I Am</h2>
@@ -33,7 +35,7 @@
         technologies and building creative projects.
     </p>
 </section>
-<section class="skills">
+<section class="skills" id="skills">
     <p class="small-text">MY SKILLS</p>
 
     <h2>What I Know</h2>
@@ -46,7 +48,7 @@
         <div class="skill">Git & GitHub</div>
     </div>
 </section>
-<section class="projects">
+<section class="projects" id="projects">
     <p class="small-text">MY PROJECTS</p>
 
     <h2>What I've Built</h2>
@@ -78,7 +80,7 @@
 
     </div>
 </section>
-<section class="contact">
+<section class="contact" id="contact">
     <p class="small-text">CONTACT ME</p>
 
     <h2>Let's Connect</h2>
