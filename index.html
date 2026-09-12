@@ -18,11 +18,20 @@
 
     <h1>Hello, I'm <span>Ridi</span> 👋</h1>
 
-    <p>I am a CSE student and I'm learning web development.</p>
-
+    <p class="home-description">
+    I am a CSE student passionate about web development,
+    programming, and creating useful digital solutions.
+</p>
+<div id="backendData"></div>
+<div class="home-buttons">
     <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
-    View My Work
-</button>
+        View My Work
+    </button>
+
+    <button class="contact-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+        Contact Me
+    </button>
+</div>
 </section>
 <section class="about" id="about">
     <p class="small-text">ABOUT ME</p>
@@ -91,11 +100,11 @@
     </p>
 
     <form>
-        <input type="text" placeholder="Your Name" required>
+        <input type="text" id="name" placeholder="Your Name" required>
 
-        <input type="email" placeholder="Your Email" required>
+<input type="email" id="email" placeholder="Your Email" required>
 
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+<textarea id="message" placeholder="Your Message" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
     </form>

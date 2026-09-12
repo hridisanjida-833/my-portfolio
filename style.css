@@ -73,6 +73,12 @@ nav a:hover {
 .home h1 span {
     color: #6c4ab6;
 }
+.home-description {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 18px;
+}
 
 .home button {
     margin-top: 20px;
@@ -85,8 +91,22 @@ nav a:hover {
     cursor: pointer;
 }
 
-.home button:hover {
-    background-color: #553394;
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-button {
+    background-color: transparent !important;
+    color: #6c4ab6 !important;
+    border: 2px solid #6c4ab6 !important;
+}
+
+.contact-button:hover {
+    background-color: #6c4ab6 !important;
+    color: white !important;
 }
 
 
@@ -101,12 +121,15 @@ nav a:hover {
 .about h2 {
     font-size: 35px;
     margin: 15px 0;
+    color: #6c4ab6;
 }
 
 .about > p:last-child {
     color: #666;
     font-size: 18px;
     line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 
@@ -360,6 +383,14 @@ body.light-mode .contact textarea {
 
     body {
         padding-top: 50px;
+        .home-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-buttons button {
+    width: 200px;
+}
     }
 
     nav {
