@@ -91,7 +91,35 @@ func messagesHandler(w http.ResponseWriter, r *http.Request) {
 
     json.NewEncoder(w).Encode(messages)
 }
+func deleteMessageHandler(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Methods", "DELETE, OPTIONS")
 
+    if r.Method == "OPTIONS" {
+        return
+    }
+
+    if r.Method != "DELETE" {
+        fmt.Fprintln(w, "Only DELETE requests are allowed")
+        return
+    }
+
+    id := r.URL.Query().Get("id")
+
+    if id == "" {
+        fmt.Fprintln(w, "Message ID is required")
+        return
+    }
+
+    _, err := db.Exec("DELETE FROM messages WHERE id = $1", id)
+
+    if err != nil {
+        fmt.Fprintln(w, "Error deleting message:", err)
+        return
+    }
+
+    fmt.Fprintln(w, "Message deleted successfully!")
+}
 func homeHandler(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
 
@@ -122,7 +150,7 @@ func main() {
     http.HandleFunc("/", homeHandler)
     http.HandleFunc("/contact", contactHandler)
     http.HandleFunc("/messages", messagesHandler)
-
+http.HandleFunc("/delete-message", deleteMessageHandler)
     fmt.Println("Backend server is running on http://localhost:8080")
 
     http.ListenAndServe(":8080", nil)
