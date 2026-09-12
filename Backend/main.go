@@ -57,7 +57,7 @@ func messagesHandler(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
     w.Header().Set("Content-Type", "application/json")
 
-    rows, err := db.Query("SELECT id, name, email, message FROM messages ORDER BY id DESC")
+   rows, err := db.Query("SELECT id, name, email, message, created_at FROM messages ORDER BY id DESC")
 
     if err != nil {
         fmt.Fprintln(w, "Error getting messages:", err)
@@ -73,8 +73,8 @@ func messagesHandler(w http.ResponseWriter, r *http.Request) {
         var name string
         var email string
         var message string
-
-        err := rows.Scan(&id, &name, &email, &message)
+var createdAt string
+        err := rows.Scan(&id, &name, &email, &message, &createdAt)
 
         if err != nil {
             fmt.Fprintln(w, "Error reading messages:", err)
@@ -86,6 +86,7 @@ func messagesHandler(w http.ResponseWriter, r *http.Request) {
             "name":    name,
             "email":   email,
             "message": message,
+            "created_at": createdAt,
         })
     }
 

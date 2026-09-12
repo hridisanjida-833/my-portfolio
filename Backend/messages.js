@@ -21,6 +21,7 @@ messageCount.textContent = "Total Messages: " + messages.length;
                 <h3>${message.name}</h3>
                 <p><strong>Email:</strong> ${message.email}</p>
                 <p><strong>Message:</strong> ${message.message}</p>
+                <p><strong>Received:</strong> ${message.created_at}</p>
                 <button onclick="deleteMessage(${message.id})">Delete</button>
             `;
 
@@ -54,3 +55,20 @@ messageCount.textContent = "Total Messages: " + messages.length;
             alert("Could not delete the message.");
         });
 }
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.toLowerCase();
+
+    const messageCards = document.querySelectorAll(".message-card");
+
+    messageCards.forEach(card => {
+        const cardText = card.innerText.toLowerCase();
+
+        if (cardText.includes(searchText)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
