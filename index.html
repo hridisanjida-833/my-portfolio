@@ -1,10 +1,14 @@
+```html
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Ridi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
 <body>
+
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -13,27 +17,42 @@
     <a href="#contact">Contact</a>
     <button id="themeButton">🌙</button>
 </nav>
-  <section class="home" id="home">
+
+
+<!-- HOME SECTION -->
+<section class="home" id="home">
+
     <p class="small-text">WELCOME TO MY PORTFOLIO</p>
 
     <h1>Hello, I'm <span>Ridi</span> 👋</h1>
 
     <p class="home-description">
-    I am a CSE student passionate about web development,
-    programming, and creating useful digital solutions.
-</p>
-<div id="backendData"></div>
-<div class="home-buttons">
-    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
-        View My Work
-    </button>
+        I am a CSE student passionate about web development,
+        programming, and creating useful digital solutions.
+    </p>
 
-    <button class="contact-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-        Contact Me
-    </button>
-</div>
+    <div id="backendData"></div>
+
+    <div class="home-buttons">
+
+        <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+            View My Work
+        </button>
+
+        <button
+            class="contact-button"
+            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+            Contact Me
+        </button>
+
+    </div>
+
 </section>
+
+
+<!-- ABOUT SECTION -->
 <section class="about" id="about">
+
     <p class="small-text">ABOUT ME</p>
 
     <h2>Who I Am</h2>
@@ -43,53 +62,112 @@
         web development and programming. I enjoy learning new
         technologies and building creative projects.
     </p>
+
 </section>
+
+
+<!-- SKILLS SECTION -->
 <section class="skills" id="skills">
+
     <p class="small-text">MY SKILLS</p>
 
     <h2>What I Know</h2>
 
     <div class="skill-list">
+
         <div class="skill">HTML</div>
         <div class="skill">CSS</div>
         <div class="skill">JavaScript</div>
         <div class="skill">C</div>
         <div class="skill">Git & GitHub</div>
+
     </div>
+
 </section>
+
+
+<!-- PROJECTS SECTION -->
 <section class="projects" id="projects">
+
     <p class="small-text">MY PROJECTS</p>
 
     <h2>What I've Built</h2>
 
     <div class="project-list">
 
+
+        <!-- PROJECT 1 -->
         <div class="project-card">
+
             <h3>My Portfolio</h3>
+
             <p>
-                A personal portfolio website built using HTML and CSS.
+                A personal portfolio website built using HTML, CSS,
+                JavaScript, Go, and PostgreSQL.
             </p>
+
+            <p class="project-tech">
+                HTML • CSS • JavaScript • Go • PostgreSQL
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://github.com/hridisanjida-833/my-portfolio" class="project-button" target="_blank">
+    GitHub
+</a>
+
+                <a href="https://hridisanjida-833.github.io/my-portfolio/" class="project-button" target="_blank">
+    Live Demo
+</a>
+
+            </div>
+
         </div>
 
+
+        <!-- PROJECT 2 -->
         <div class="project-card">
+
             <h3>Wholesale Management System</h3>
+
             <p>
                 A web-based system for managing products, inventory,
-                and wholesale business information.
+                and wholesale business information with data export features.
             </p>
+
+            <p class="project-tech">
+                React • Go • PostgreSQL • GitHub
+            </p>
+
         </div>
 
+
+        <!-- PROJECT 3 -->
         <div class="project-card">
+
             <h3>Smart Livestock Farm</h3>
+
             <p>
-                A web application providing information about farm
-                animals and useful waste management solutions.
+                A web application providing detailed information about
+                farm animals and showing how animal waste can be used
+                for useful solutions such as biogas production.
             </p>
+
+            <p class="project-tech">
+                HTML • CSS • JavaScript • Database
+            </p>
+
         </div>
+
 
     </div>
+
 </section>
+
+
+<!-- CONTACT SECTION -->
 <section class="contact" id="contact">
+
     <p class="small-text">CONTACT ME</p>
 
     <h2>Let's Connect</h2>
@@ -100,18 +178,47 @@
     </p>
 
     <form>
-        <input type="text" id="name" placeholder="Your Name" required>
 
-<input type="email" id="email" placeholder="Your Email" required>
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
 
-<textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
 
-        <button type="submit">Send Message</button>
+        <textarea
+            id="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
     </form>
+
 </section>
+
+
+<!-- FOOTER -->
 <footer>
+
     <p>© 2026 Ridi. All Rights Reserved.</p>
+
 </footer>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
+```
