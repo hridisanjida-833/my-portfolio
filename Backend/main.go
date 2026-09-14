@@ -5,7 +5,7 @@ import (
     "encoding/json"
     "fmt"
     "net/http"
-
+    "os"
     _ "github.com/lib/pq"
 )
 
@@ -152,7 +152,13 @@ func main() {
     http.HandleFunc("/contact", contactHandler)
     http.HandleFunc("/messages", messagesHandler)
 http.HandleFunc("/delete-message", deleteMessageHandler)
-    fmt.Println("Backend server is running on http://localhost:8080")
+    port := os.Getenv("PORT")
 
-    http.ListenAndServe(":8080", nil)
+if port == "" {
+    port = "8080"
+}
+
+fmt.Println("Backend server is running on port " + port)
+
+http.ListenAndServe(":"+port, nil)
 }
