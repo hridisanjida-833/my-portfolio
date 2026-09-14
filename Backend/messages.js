@@ -1,6 +1,6 @@
 const messagesContainer = document.getElementById("messagesContainer");
 const messageCount = document.getElementById("messageCount");
-fetch("http://localhost:8080/messages")
+fetch("https://my-portfolio-asoi.onrender.com/messages")
     .then(response => response.json())
     .then(messages => {
 messageCount.textContent = "Total Messages: " + messages.length;
@@ -40,7 +40,7 @@ messageCount.textContent = "Total Messages: " + messages.length;
         return;
     }
 
-    fetch(`http://localhost:8080/delete-message?id=${id}`, {
+    fetch(`https://my-portfolio-asoi.onrender.com/delete-message?id=${id}`, {
         method: "DELETE"
     })
         .then(response => response.text())
