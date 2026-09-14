@@ -18,7 +18,7 @@ contactForm.addEventListener("submit", function (event) {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    fetch("http://localhost:8080/contact", {
+    fetch("https://my-portfolio-asoi.onrender.com/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -41,7 +41,7 @@ contactForm.addEventListener("submit", function (event) {
     });
 });
 
-    fetch("http://localhost:8080")
+    fetch("https://my-portfolio-asoi.onrender.com")
     .then(response => response.text())
     .then(data => {
         document.getElementById("backendData").innerText = data;
